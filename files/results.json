@@ -1,0 +1,116 @@
+{
+  "performance": {
+    "accuracy": 0.644,
+    "precision": 0.6415,
+    "recall": 0.5714,
+    "f1": 0.6044,
+    "roc_auc": 0.6958,
+    "brier_score": 0.2208,
+    "n_test": 1500,
+    "base_rate": 0.476
+  },
+  "confusion_matrix": [
+    [
+      558,
+      228
+    ],
+    [
+      306,
+      408
+    ]
+  ],
+  "feature_importance": {
+    "delinquencies_2yr": 0.012,
+    "age": 0.0243,
+    "num_open_accounts": 0.043,
+    "zip_tier": 0.0529,
+    "employment_length_years": 0.0935,
+    "loan_amount_requested": 0.1198,
+    "debt_to_income": 0.1303,
+    "annual_income": 0.1401,
+    "credit_score": 0.384
+  },
+  "stability": {
+    "score_psi": 0.0754,
+    "feature_psi": {
+      "credit_score": 0.0504,
+      "annual_income": 0.039,
+      "debt_to_income": 0.0649,
+      "employment_length_years": 0.0,
+      "age": 0.0,
+      "num_open_accounts": 0.0,
+      "delinquencies_2yr": 0.0,
+      "loan_amount_requested": 0.0,
+      "zip_tier": 0.0
+    },
+    "simulated_period_approval_rate": 0.318,
+    "baseline_approval_rate": 0.424
+  },
+  "fairness": {
+    "protected_group": {
+      "by_group": {
+        "selection_rate": {
+          "Group A": 0.4546,
+          "Group B": 0.3642
+        },
+        "true_positive_rate": {
+          "Group A": 0.6008,
+          "Group B": 0.5088
+        },
+        "false_positive_rate": {
+          "Group A": 0.3142,
+          "Group B": 0.2464
+        }
+      },
+      "demographic_parity_difference": 0.0905,
+      "demographic_parity_ratio": 0.801,
+      "equalized_odds_difference": 0.0921,
+      "four_fifths_pass": true
+    },
+    "gender": {
+      "by_group": {
+        "selection_rate": {
+          "Female": 0.4331,
+          "Male": 0.4156
+        },
+        "true_positive_rate": {
+          "Female": 0.5714,
+          "Male": 0.5714
+        },
+        "false_positive_rate": {
+          "Female": 0.3162,
+          "Male": 0.2645
+        }
+      },
+      "demographic_parity_difference": 0.0175,
+      "demographic_parity_ratio": 0.9595,
+      "equalized_odds_difference": 0.0517,
+      "four_fifths_pass": true
+    }
+  },
+  "data_quality": {
+    "n_rows": 6000,
+    "n_features": 9,
+    "missing_by_feature": {
+      "credit_score": 0.0,
+      "annual_income": 0.0,
+      "debt_to_income": 0.0,
+      "employment_length_years": 0.012,
+      "age": 0.0,
+      "num_open_accounts": 0.0,
+      "delinquencies_2yr": 0.0,
+      "loan_amount_requested": 0.0,
+      "zip_tier": 0.0
+    },
+    "duplicate_applicant_ids": 0,
+    "class_balance": {
+      "0": 0.5242,
+      "1": 0.4758
+    },
+    "credit_score_range": [
+      451,
+      850
+    ],
+    "outliers_income_gt_3std": 11
+  }
+}
